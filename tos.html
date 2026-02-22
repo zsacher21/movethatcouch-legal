@@ -114,6 +114,7 @@
   display:flex;
   justify-content:center;
   margin: 18px 0 10px;
+  padding: 0 clamp(16px, 4.5vw, 28px); /* ✅ adds safe side padding */
 }
 
 .returnToAppBtn{
@@ -597,22 +598,26 @@
       const appUrl = "https://app.movethatcouch.com/";
       const fallbackUrl = "https://www.movethatcouch.com/";
 
-      let didHide = false;
+      let opened = false;
 
-      const visibilityHandler = () => {
-        if (document.visibilityState === "hidden") didHide = true;
-      };
+      const markOpened = () => { opened = true; };
 
-      document.addEventListener("visibilitychange", visibilityHandler);
+      // More reliable signals on iOS than visibilitychange alone
+      window.addEventListener("pagehide", markOpened, { once: true });
+      window.addEventListener("blur", markOpened, { once: true });
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "hidden") opened = true;
+      }, { once: true });
 
-      // Try to open the app (App Links / Universal Links)
+      // Attempt to open the app
       window.location.href = appUrl;
 
-      // If we never backgrounded, app didn't open -> go to homepage
+      // If app didn't open, go to marketing homepage
       setTimeout(() => {
-        document.removeEventListener("visibilitychange", visibilityHandler);
-        if (!didHide) window.location.href = fallbackUrl;
-      }, 1400);
+        if (!opened) {
+          window.location.href = fallbackUrl;
+        }
+      }, 1600);
     });
   })();
 </script>
