@@ -404,5 +404,45 @@
   © 2026 ZM Platforms LLC. All rights reserved.
 </div>
   </footer>
+  <script>
+  (function () {
+    const btn = document.getElementById("returnToAppBtn");
+    if (!btn) return;
+
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // ✅ This must be a REAL universal link URL your app is associated with
+      // Use a stable in-app route if you have one; homepage is fine too.
+      const appUrl = "https://app.movethatcouch.com/";
+      const fallbackUrl = "https://www.movethatcouch.com/";
+
+      let didBackground = false;
+
+      const onVis = () => {
+        if (document.visibilityState === "hidden") didBackground = true;
+      };
+      const onBlur = () => {
+        didBackground = true;
+      };
+
+      document.addEventListener("visibilitychange", onVis, { passive: true });
+      window.addEventListener("blur", onBlur, { passive: true });
+
+      // Attempt to open the app via Universal Link / App Link
+      window.location.href = appUrl;
+
+      // Fallback ONLY if we never backgrounded
+      setTimeout(() => {
+        document.removeEventListener("visibilitychange", onVis);
+        window.removeEventListener("blur", onBlur);
+
+        if (!didBackground) {
+          window.location.href = fallbackUrl;
+        }
+      }, 1800);
+    });
+  })();
+</script>
 </body>
 </html>
