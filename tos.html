@@ -572,7 +572,7 @@
 </main>
 
   <div class="returnToAppWrap">
-  <a class="returnToAppBtn" href="https://app.movethatcouch.com/open">
+  <a class="returnToAppBtn" href="https://app.movethatcouch.com/open-app">
     Return to App
   </a>
 </div>
@@ -591,37 +591,5 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
-  <script>
-  (function () {
-    const btn = document.getElementById("returnToAppBtn");
-    if (!btn) return;
-
-    btn.addEventListener("click", () => {
-      const appUrl = "https://app.movethatcouch.com/";
-      const fallbackUrl = "https://www.movethatcouch.com/";
-
-      let opened = false;
-
-      const markOpened = () => { opened = true; };
-
-      // More reliable signals on iOS than visibilitychange alone
-      window.addEventListener("pagehide", markOpened, { once: true });
-      window.addEventListener("blur", markOpened, { once: true });
-      document.addEventListener("visibilitychange", () => {
-        if (document.visibilityState === "hidden") opened = true;
-      }, { once: true });
-
-      // Attempt to open the app
-      window.location.href = appUrl;
-
-      // If app didn't open, go to marketing homepage
-      setTimeout(() => {
-        if (!opened) {
-          window.location.href = fallbackUrl;
-        }
-      }, 1600);
-    });
-  })();
-</script>
-</body>
+  </body>
 </html>
