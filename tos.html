@@ -1,205 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Favicon (browser tab icon) -->
-<link rel="icon" type="image/png" href="https://www.movethatcouch.com/mtc_couch_appicon_white_1024_adjusted.png">
-
-<!-- Nice-to-have: supports some browsers that prefer an explicit size -->
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.movethatcouch.com/mtc_couch_appicon_white_1024_adjusted.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.movethatcouch.com/mtc_couch_appicon_white_1024_adjusted.png">
-
-<!-- Nice-to-have: iOS home screen icon -->
-<link rel="apple-touch-icon" href="https://www.movethatcouch.com/mtc_couch_appicon_white_1024_adjusted.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Terms of Service | MOVE THAT COUCH!</title>
 
-  <!-- FINAL – APPROVED TERMS OF SERVICE -->
+  <link rel="icon" type="image/png" href="https://www.movethatcouch.com/mtc_couch_appicon_white_1024_adjusted.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.movethatcouch.com/mtc_couch_appicon_white_1024_adjusted.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.movethatcouch.com/mtc_couch_appicon_white_1024_adjusted.png">
+  <link rel="apple-touch-icon" href="https://www.movethatcouch.com/mtc_couch_appicon_white_1024_adjusted.png">
 
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f5f6f8;
-      color: #1f2933;
-    }
-    .footer-links { margin-bottom: 0.75rem; }
-.footer-copy { display: block; }
-
-    /* App-style header (matches in-app look) */
-.appHeader{
-  background: #0f172a;
-  color:#fff;
-  padding:
-    calc(14px + env(safe-area-inset-top))
-    clamp(16px, 4.5vw, 28px)
-    14px
-    clamp(16px, 4.5vw, 28px);
-}
-
-.appHeaderInner{
-  max-width: 900px;
-  margin: 0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-}
-
-.appHeaderLeft{
-  min-width:0;
-}
-
-.appTitle{
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  font-size: 22px;
-  line-height: 1.1;
-  white-space: nowrap;
-}
-
-.appTagline{
-  margin-top: 6px;
-  font-size: 14px;
-  opacity: 0.85;
-  line-height: 1.2;
-}
-
-/* Right-side icon */
-.appIconLink{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius: 16px;
-  text-decoration:none;
-  -webkit-tap-highlight-color: transparent;
-  flex-shrink:0;
-}
-
-.appIcon{
-  height: 56px;
-  width: 56px;
-  border-radius: 14px;
-  background: #fff;
-  padding: 8px;
-  display:block;
-}
-
-@media (min-width: 768px){
-  .appTitle{ font-size: 24px; }
-  .appIcon{ height: 64px; width: 64px; padding: 10px; }
-}
-
-    nav a:hover {
-      text-decoration: underline;
+    :root{
+      --forest:#143d34;
+      --leaf:#7ed957;
+      --lime:#c5f36b;
+      --cream:#f7f3e8;
+      --paper:#fffdf7;
+      --ink:#17332c;
+      --muted:#5d6d67;
+      --line:#d7dfd3;
     }
 
-    main {
-      max-width: 900px;
-      margin: 2rem auto 3rem;
-      padding: 0 1rem;
+    *{box-sizing:border-box}
+
+    html{background:var(--cream)}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      background:
+        radial-gradient(circle at 88% 8%,rgba(197,243,107,.22),transparent 23rem),
+        var(--cream);
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+      line-height:1.7;
     }
 
-    .card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 2.2rem 2rem;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    .legal-header{
+      width:min(100% - 40px,1080px);
+      margin:0 auto;
+      padding:22px 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
     }
 
-    h1 {
-      margin-top: 0;
-      font-size: 2rem;
+    .brand{
+      display:inline-flex;
+      align-items:center;
+      gap:11px;
+      color:var(--forest);
+      font-size:14px;
+      font-weight:800;
+      letter-spacing:.02em;
+      text-decoration:none;
     }
 
-    h2 {
-      margin-top: 2rem;
-      font-size: 1.25rem;
+    .brand img{
+      width:42px;
+      height:42px;
+      border-radius:9px;
+      object-fit:cover;
+      background:#fff;
     }
 
-    h3 {
-      margin-top: 1.2rem;
-      font-size: 1.05rem;
+    .home{
+      padding:10px 15px;
+      border-radius:6px;
+      background:var(--lime);
+      color:var(--forest);
+      font-size:13px;
+      font-weight:800;
+      text-decoration:none;
     }
 
-    p, li {
-      line-height: 1.65;
-      font-size: 0.98rem;
+    main{
+      width:min(100% - 40px,880px);
+      margin:28px auto 0;
+      padding:0;
+      max-width:none;
     }
 
-    em {
-      color: #6b7280;
+    .card{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:clamp(30px,6vw,68px);
+      box-shadow:0 18px 50px rgba(20,61,52,.08);
     }
 
-    ul {
-      padding-left: 1.25rem;
+    h1,h2,h3{
+      color:var(--forest);
     }
 
-    footer {
-      text-align: center;
-      margin: 2rem 0;
-      color: #6b7280;
-      font-size: 0.9rem;
+    h1{
+      margin:0 0 .25rem;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(42px,7vw,64px);
+      line-height:.98;
+      letter-spacing:-.035em;
     }
 
-    footer a {
-      color: #2563eb;
-      text-decoration: none;
-      margin: 0 0.4rem;
+    h2{
+      margin:2.25rem 0 .7rem;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(24px,3vw,30px);
+      line-height:1.15;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    h3{
+      margin:1.6rem 0 .55rem;
+      font-size:17px;
+      line-height:1.3;
     }
 
-    a {
-      color: #2563eb;
+    p,li{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.7;
     }
-    /* Return to App button */
-.returnToAppWrap{
-  display:flex;
-  justify-content:center;
-  margin: 18px 0 10px;
-  padding: 0 clamp(16px, 4.5vw, 28px); /* ✅ adds safe side padding */
-}
 
-.returnToAppBtn{
-  background:#22c55e;
-  color:#fff;
-  border:0;
-  width: 100%;
-  max-width: 520px;
-  height: 56px;
-  border-radius: 14px;
-  font-weight: 900;
-  font-size: 18px;
-  cursor: pointer;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  -webkit-tap-highlight-color: transparent;
-  text-decoration: none;
-}
+    p{
+      margin:0 0 1rem;
+    }
 
-.returnToAppBtn:active{
-  transform: translateY(1px);
-}
+    ul{
+      margin:.6rem 0 1.25rem;
+      padding-left:1.45rem;
+    }
+
+    li{
+      margin:.22rem 0;
+    }
+
+    strong{
+      color:var(--ink);
+    }
+
+    em{
+      color:var(--muted);
+    }
+
+    a{
+      color:var(--forest);
+    }
+
+    .returnToAppWrap{
+      display:flex;
+      justify-content:center;
+      width:min(100% - 40px,880px);
+      margin:24px auto 0;
+    }
+
+    .returnToAppBtn{
+      width:100%;
+      max-width:520px;
+      min-height:54px;
+      border-radius:9px;
+      background:var(--leaf);
+      color:var(--forest);
+      font-weight:800;
+      font-size:16px;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .returnToAppBtn:hover{
+      filter:brightness(.97);
+    }
+
+    .returnToAppBtn:active{
+      transform:translateY(1px);
+    }
+
+    .legal-footer{
+      width:min(100% - 48px,880px);
+      margin:34px auto 0;
+      padding:24px 20px 34px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+
+    .footer-nav{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:4px 8px;
+      margin-bottom:7px;
+    }
+
+    .footer-nav a{
+      color:var(--forest);
+      font-weight:600;
+      text-decoration:none;
+    }
+
+    .footer-nav a:hover{
+      text-decoration:underline;
+    }
+
+    .brand:focus-visible,
+    .home:focus-visible,
+    .returnToAppBtn:focus-visible,
+    .footer-nav a:focus-visible{
+      outline:2px solid var(--leaf);
+      outline-offset:3px;
+    }
+
+    @media(max-width:600px){
+      .legal-header{
+        width:min(100% - 28px,1080px);
+        padding:14px 0;
+      }
+
+      .brand span{
+        display:none;
+      }
+
+      main{
+        width:min(100% - 28px,880px);
+        margin-top:18px;
+      }
+
+      .card{
+        padding:30px 22px;
+        border-radius:10px;
+      }
+
+      h1{
+        font-size:42px;
+      }
+
+      .returnToAppWrap,
+      .legal-footer{
+        width:min(100% - 28px,880px);
+      }
+
+      .legal-footer{
+        padding-inline:8px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<header class="appHeader">
-  <div class="appHeaderInner">
-    <div class="appHeaderLeft">
-      <div class="appTitle">MOVE THAT COUCH!</div>
-      <div class="appTagline">Furniture delivery, assembly & more.</div>
-    </div>
+<header class="legal-header">
+  <a class="brand" href="https://movethatcouch.com/" aria-label="MOVE THAT COUCH! home">
+    <img src="https://www.movethatcouch.com/mtc_couch_appicon_white_1024_adjusted.png" alt="">
+    <span>MOVE THAT COUCH!</span>
+  </a>
 
-    <a class="appIconLink" href="https://www.movethatcouch.com" aria-label="Move That Couch home">
-      <img class="appIcon" src="https://www.movethatcouch.com/mtc_couch_appicon_white_1024_adjusted.png" alt="MOVE THAT COUCH icon" />
-    </a>
-  </div>
+  <a class="home" href="https://movethatcouch.com/">Home</a>
 </header>
 
 <main>
@@ -222,22 +281,22 @@
     <h2>1. Platform Purpose & Relationship of the Parties</h2>
     <p>
       MOVE THAT COUCH! is a technology platform that
-<strong>connects customers and independent service providers</strong>
-for furniture delivery, assembly, mounting, and related light services.
-We do not provide transportation or labor services and do not operate as a carrier or service provider.
+      <strong>connects customers and independent service providers</strong>
+      for furniture delivery, assembly, mounting, and related light services.
+      We do not provide transportation or labor services and do not operate as a carrier or service provider.
     </p>
 
     <p>
-  Drivers and service providers are <strong>independent providers</strong> and are
-  <strong>not employees, agents, or contractors of MOVE THAT COUCH!</strong>.
-  All agreements regarding services, pricing, scope of work, scheduling, and service performance are
-  <strong>solely between customers and independent service providers</strong>.
-  The platform is not responsible for loss, damage, delays, service outcomes, or disputes between users.
-</p>
+      Drivers and service providers are <strong>independent providers</strong> and are
+      <strong>not employees, agents, or contractors of MOVE THAT COUCH!</strong>.
+      All agreements regarding services, pricing, scope of work, scheduling, and service performance are
+      <strong>solely between customers and independent service providers</strong>.
+      The platform is not responsible for loss, damage, delays, service outcomes, or disputes between users.
+    </p>
 
     <p>
       The platform facilitates connections only and does
-<strong>not</strong> arrange, manage, or provide delivery, shipping, freight, logistics, labor, or installation services.
+      <strong>not</strong> arrange, manage, or provide delivery, shipping, freight, logistics, labor, or installation services.
     </p>
 
     <h2>2. Where the Platform Operates</h2>
@@ -253,7 +312,8 @@ We do not provide transportation or labor services and do not operate as a carri
       <strong>continuous custody of a single independent driver</strong>
       using <strong>standard road travel</strong>, where a
       <strong>drivable route exists</strong> between the pickup and drop-off locations, and for light services that can be completed by a
-<strong>single independent provider</strong> using standard tools and road travel, where applicable.    </p>
+      <strong>single independent provider</strong> using standard tools and road travel, where applicable.
+    </p>
 
     <p>
       Deliveries that require <strong>international transit</strong>,
@@ -268,50 +328,50 @@ We do not provide transportation or labor services and do not operate as a carri
 
     <h2>3. Service Types & Limitations</h2>
 
-<p>
-  MOVE THAT COUCH! may facilitate requests for services including, but not limited to:
-</p>
+    <p>
+      MOVE THAT COUCH! may facilitate requests for services including, but not limited to:
+    </p>
 
-<ul>
-  <li>Furniture delivery</li>
-  <li>Furniture assembly</li>
-  <li>TV mounting and wall mounting</li>
-  <li>Picture, mirror, and décor hanging</li>
-  <li>General light labor related to furniture handling</li>
-</ul>
+    <ul>
+      <li>Furniture delivery</li>
+      <li>Furniture assembly</li>
+      <li>TV mounting and wall mounting</li>
+      <li>Picture, mirror, and décor hanging</li>
+      <li>General light labor related to furniture handling</li>
+    </ul>
 
-<p>
-  These services are performed entirely by independent service providers.
-</p>
+    <p>
+      These services are performed entirely by independent service providers.
+    </p>
 
-<p>
-  The platform does not support requests involving:
-</p>
+    <p>
+      The platform does not support requests involving:
+    </p>
 
-<ul>
-  <li>Electrical work</li>
-  <li>Plumbing</li>
-  <li>Structural modifications</li>
-  <li>Work requiring licensed professionals</li>
-  <li>Any work requiring permits or inspections</li>
-</ul>
+    <ul>
+      <li>Electrical work</li>
+      <li>Plumbing</li>
+      <li>Structural modifications</li>
+      <li>Work requiring licensed professionals</li>
+      <li>Any work requiring permits or inspections</li>
+    </ul>
 
-<p>
-  Customers are responsible for ensuring that requested services are appropriate
-  for a general labor provider and do not require specialized licensing.
-</p>
+    <p>
+      Customers are responsible for ensuring that requested services are appropriate
+      for a general labor provider and do not require specialized licensing.
+    </p>
 
-<h2>4. Requests Not Supported on the Platform</h2>
+    <h2>4. Requests Not Supported on the Platform</h2>
 
-<p>
-  MOVE THAT COUCH! is designed primarily for furniture-related services.
-  Other requests may be allowed, provided they do <strong>not</strong> fall into
-  the categories below.
-</p>
+    <p>
+      MOVE THAT COUCH! is designed primarily for furniture-related services.
+      Other requests may be allowed, provided they do <strong>not</strong> fall into
+      the categories below.
+    </p>
 
-<p>
-  The platform does <strong>not</strong> support requests involving:
-</p>
+    <p>
+      The platform does <strong>not</strong> support requests involving:
+    </p>
 
     <h3>4.1 Passenger Transportation</h3>
     <ul>
@@ -378,80 +438,80 @@ We do not provide transportation or labor services and do not operate as a carri
     </ul>
 
     <h3>4.8 Licensed or Regulated Services</h3>
-<ul>
-  <li>Electrical work</li>
-  <li>Plumbing</li>
-  <li>Structural or load-bearing modifications</li>
-  <li>Any work requiring a licensed or certified professional</li>
-</ul>
-    
+    <ul>
+      <li>Electrical work</li>
+      <li>Plumbing</li>
+      <li>Structural or load-bearing modifications</li>
+      <li>Any work requiring a licensed or certified professional</li>
+    </ul>
+
     <h2>5. Driver & Service Provider Compliance, No Liability & No Insurance Provided</h2>
 
-<p>
-  Drivers and service providers are solely responsible for complying with all applicable laws,
-  regulations, licensing requirements, registration requirements, certification requirements,
-  and insurance obligations applicable to the services they perform.
-</p>
+    <p>
+      Drivers and service providers are solely responsible for complying with all applicable laws,
+      regulations, licensing requirements, registration requirements, certification requirements,
+      and insurance obligations applicable to the services they perform.
+    </p>
 
-<p>
-  Service providers may choose to share information regarding insurance coverage, experience,
-  qualifications, certifications, licenses, equipment, or other credentials through their
-  profiles. Any such information is optional, self-reported by the service provider, and is
-  not independently verified by MOVE THAT COUCH!.
-</p>
+    <p>
+      Service providers may choose to share information regarding insurance coverage, experience,
+      qualifications, certifications, licenses, equipment, or other credentials through their
+      profiles. Any such information is optional, self-reported by the service provider, and is
+      not independently verified by MOVE THAT COUCH!.
+    </p>
 
-<p>
-  Customers are responsible for reviewing provider profiles, ratings, reviews, photos,
-  pricing, and other information made available through the platform before selecting a
-  service provider.
-</p>
+    <p>
+      Customers are responsible for reviewing provider profiles, ratings, reviews, photos,
+      pricing, and other information made available through the platform before selecting a
+      service provider.
+    </p>
 
-<ul>
-  <li>MOVE THAT COUCH! does <strong>not</strong> provide insurance.</li>
-  <li>MOVE THAT COUCH! does <strong>not</strong> conduct background checks.</li>
-  <li>MOVE THAT COUCH! does <strong>not</strong> verify licenses, certifications, qualifications, or insurance coverage.</li>
-  <li>MOVE THAT COUCH! does <strong>not</strong> guarantee coverage of any kind.</li>
-</ul>
+    <ul>
+      <li>MOVE THAT COUCH! does <strong>not</strong> provide insurance.</li>
+      <li>MOVE THAT COUCH! does <strong>not</strong> conduct background checks.</li>
+      <li>MOVE THAT COUCH! does <strong>not</strong> verify licenses, certifications, qualifications, or insurance coverage.</li>
+      <li>MOVE THAT COUCH! does <strong>not</strong> guarantee coverage of any kind.</li>
+    </ul>
 
-<p>
-  MOVE THAT COUCH! does <strong>not inspect, verify, approve, certify, endorse, supervise,
-  manage, direct, or control</strong> the services performed by independent service providers.
-</p>
+    <p>
+      MOVE THAT COUCH! does <strong>not inspect, verify, approve, certify, endorse, supervise,
+      manage, direct, or control</strong> the services performed by independent service providers.
+    </p>
 
-<p>
-  All vehicles, tools, equipment, materials, supplies, and methods used for services are
-  selected and operated solely by the independent service provider.
-</p>
+    <p>
+      All vehicles, tools, equipment, materials, supplies, and methods used for services are
+      selected and operated solely by the independent service provider.
+    </p>
 
-<p>
-  MOVE THAT COUCH! is <strong>not liable</strong> for property damage, loss, injury, delays,
-  service outcomes, or claims arising from services, deliveries, installations, assemblies,
-  mounting services, junk removal services, or user interactions.
-</p>
+    <p>
+      MOVE THAT COUCH! is <strong>not liable</strong> for property damage, loss, injury, delays,
+      service outcomes, or claims arising from services, deliveries, installations, assemblies,
+      mounting services, junk removal services, or user interactions.
+    </p>
 
-<p>
-  This includes, but is not limited to:
-</p>
+    <p>
+      This includes, but is not limited to:
+    </p>
 
-<ul>
-  <li>Damage to walls, surfaces, floors, ceilings, furniture, fixtures, or structures</li>
-  <li>Improper assembly, installation, mounting, or handling of items</li>
-  <li>Personal injury occurring during or after service performance</li>
-  <li>Failure of mounted, assembled, transported, or installed items after completion</li>
-  <li>Loss, theft, or damage to property</li>
-  <li>Violations of applicable laws, regulations, licensing requirements, or insurance requirements by service providers</li>
-</ul>
+    <ul>
+      <li>Damage to walls, surfaces, floors, ceilings, furniture, fixtures, or structures</li>
+      <li>Improper assembly, installation, mounting, or handling of items</li>
+      <li>Personal injury occurring during or after service performance</li>
+      <li>Failure of mounted, assembled, transported, or installed items after completion</li>
+      <li>Loss, theft, or damage to property</li>
+      <li>Violations of applicable laws, regulations, licensing requirements, or insurance requirements by service providers</li>
+    </ul>
 
-<p>
-  MOVE THAT COUCH! does not guarantee the quality, safety, legality, suitability, timeliness,
-  completeness, or correctness of any work performed.
-</p>
+    <p>
+      MOVE THAT COUCH! does not guarantee the quality, safety, legality, suitability, timeliness,
+      completeness, or correctness of any work performed.
+    </p>
 
-<p>
-  Services performed through the platform are not guaranteed to meet professional,
-  licensed-trade, manufacturer, industry, or code-compliance standards.
-</p>
-    
+    <p>
+      Services performed through the platform are not guaranteed to meet professional,
+      licensed-trade, manufacturer, industry, or code-compliance standards.
+    </p>
+
     <h2>6. Quotes, Scheduling, Booking Deposits, and Payments</h2>
 
     <h3>6.1 Provider Quotes & Scheduling Terms</h3>
@@ -468,200 +528,202 @@ We do not provide transportation or labor services and do not operate as a carri
 
     <h3>6.2 Booking Deposits</h3>
 
-<p>
-  When a customer accepts a quote, a <strong>booking deposit</strong> is charged through the platform using
-  <strong>Stripe</strong>. Booking deposits are calculated using MOVE THAT COUCH!'s booking deposit structure in effect at the time the booking is accepted.
-</p>
+    <p>
+      When a customer accepts a quote, a <strong>booking deposit</strong> is charged through the platform using
+      <strong>Stripe</strong>. Booking deposits are calculated using MOVE THAT COUCH!'s booking deposit structure in effect at the time the booking is accepted.
+    </p>
 
-<p>
-  Booking deposit rates, tier structures, maximum booking deposits, and related pricing policies may be modified by MOVE THAT COUCH! from time to time. The applicable booking deposit is the amount displayed to the customer during checkout and accepted at the time of booking.
-</p>
+    <p>
+      Booking deposit rates, tier structures, maximum booking deposits, and related pricing policies may be modified by MOVE THAT COUCH! from time to time. The applicable booking deposit is the amount displayed to the customer during checkout and accepted at the time of booking.
+    </p>
 
-<ul>
-  <li>MOVE THAT COUCH! <strong>keeps the booking deposit</strong> on completed jobs.</li>
-  <li>The remaining balance is paid to the service provider by the customer.</li>
-</ul>
+    <ul>
+      <li>MOVE THAT COUCH! <strong>keeps the booking deposit</strong> on completed jobs.</li>
+      <li>The remaining balance is paid to the service provider by the customer.</li>
+    </ul>
 
-<p>
-  Depending on the payment method selected by the parties, payment of the remaining balance may occur directly between the customer and service provider or may be facilitated through payment tools made available through the platform, including provider-generated invoices processed by Stripe.
-</p>
+    <p>
+      Depending on the payment method selected by the parties, payment of the remaining balance may occur directly between the customer and service provider or may be facilitated through payment tools made available through the platform, including provider-generated invoices processed by Stripe.
+    </p>
 
-<p>
-  MOVE THAT COUCH! does not require service providers to accept any particular payment method and does not guarantee that card payments will be offered for every service request.
-</p>
+    <p>
+      MOVE THAT COUCH! does not require service providers to accept any particular payment method and does not guarantee that card payments will be offered for every service request.
+    </p>
 
-<p>
-  In some cases, a customer or user managing a service on behalf of a client may send a payment request or payment link to a third party for payment of the booking deposit. Any person submitting payment through such a payment link acknowledges and agrees to the applicable quote, booking, cancellation, refund, and platform terms associated with that service request.
-</p>
-    
+    <p>
+      In some cases, a customer or user managing a service on behalf of a client may send a payment request or payment link to a third party for payment of the booking deposit. Any person submitting payment through such a payment link acknowledges and agrees to the applicable quote, booking, cancellation, refund, and platform terms associated with that service request.
+    </p>
+
     <h3>6.3 Rescheduling & Cancellation Policy</h3>
 
-<p>
-  Customers and service providers may mutually agree to reschedule a booked service.
-  However, for purposes of cancellation and refund eligibility, the
-  <strong>original date and time agreed to at booking</strong> controls all
-  cancellation logic.
-</p>
+    <p>
+      Customers and service providers may mutually agree to reschedule a booked service.
+      However, for purposes of cancellation and refund eligibility, the
+      <strong>original date and time agreed to at booking</strong> controls all
+      cancellation logic.
+    </p>
 
-<p>
-  If a customer <strong>cancels more than 48 hours</strong> before the originally
-  booked service date and time, amounts paid through Stripe may be refunded to the original payment method, and any MTC Credits applied to the booking may be restored to the user's MTC Credit balance in accordance with platform policies.
-</p>
+    <p>
+      If a customer <strong>cancels more than 48 hours</strong> before the originally
+      booked service date and time, amounts paid through Stripe may be refunded to the original payment method, and any MTC Credits applied to the booking may be restored to the user's MTC Credit balance in accordance with platform policies.
+    </p>
 
-<p>
-  If a customer <strong>cancels within 48 hours</strong> of the originally booked
-  service date and time, the <strong>service provider receives 100% of the booking deposit</strong>.
-</p>
+    <p>
+      If a customer <strong>cancels within 48 hours</strong> of the originally booked
+      service date and time, the <strong>service provider receives 100% of the booking deposit</strong>.
+    </p>
 
-<p>
-  If a <strong>service provider cancels</strong> a booked service for any reason, the
-  booking deposit is <strong>automatically refunded to the customer</strong>.
-</p>
+    <p>
+      If a <strong>service provider cancels</strong> a booked service for any reason, the
+      booking deposit is <strong>automatically refunded to the customer</strong>.
+    </p>
 
-<p>
-  <strong>Important timing rule:</strong> The 48-hour window is calculated from
-  the accepted quote at booking, regardless of later discussions or rescheduling.
-</p>
+    <p>
+      <strong>Important timing rule:</strong> The 48-hour window is calculated from
+      the accepted quote at booking, regardless of later discussions or rescheduling.
+    </p>
 
-<p>
-  Stripe processes booking deposit refunds and late cancellation payouts.
-</p>
+    <p>
+      Stripe processes booking deposit refunds and late cancellation payouts.
+    </p>
 
     <h3>6.4 Provider Invoices & Card Payments</h3>
 
-<p>
-  MOVE THAT COUCH! may provide tools that allow service providers to generate invoices for completed services. Customers may choose to pay such invoices using credit cards, debit cards, or other payment methods supported by Stripe if the service provider elects to offer payment through a provider-generated invoice.
-</p>
+    <p>
+      MOVE THAT COUCH! may provide tools that allow service providers to generate invoices for completed services. Customers may choose to pay such invoices using credit cards, debit cards, or other payment methods supported by Stripe if the service provider elects to offer payment through a provider-generated invoice.
+    </p>
 
-<p>
-  Service providers are solely responsible for the amounts invoiced, the services provided, applicable taxes, and compliance with any legal or tax obligations related to those services.
-</p>
+    <p>
+      Service providers are solely responsible for the amounts invoiced, the services provided, applicable taxes, and compliance with any legal or tax obligations related to those services.
+    </p>
 
-<p>
-  MOVE THAT COUCH! does not verify invoice accuracy, does not guarantee payment collection, and is not a party to disputes regarding invoice amounts, service quality, refunds, chargebacks, or payment obligations.
-</p>
+    <p>
+      MOVE THAT COUCH! does not verify invoice accuracy, does not guarantee payment collection, and is not a party to disputes regarding invoice amounts, service quality, refunds, chargebacks, or payment obligations.
+    </p>
 
-<p>
-  Payment processing services for provider-generated invoices are performed by Stripe and may be subject to Stripe's terms, policies, fees, and processing requirements.
-</p>
+    <p>
+      Payment processing services for provider-generated invoices are performed by Stripe and may be subject to Stripe's terms, policies, fees, and processing requirements.
+    </p>
 
     <h2>7. Referral Program</h2>
-<p>
-  MOVE THAT COUCH! may offer a referral program that allows users to earn referral
-  bonuses by inviting new customers or service providers to the platform.
-</p>
+    <p>
+      MOVE THAT COUCH! may offer a referral program that allows users to earn referral
+      bonuses by inviting new customers or service providers to the platform.
+    </p>
 
-<h3>7.1 How Referrals Work</h3>
-<p>
-  Referrals may occur through a user's referral link, referral QR code, referral code, or other referral methods made available by MOVE THAT COUCH!. Referral tracking and bonus calculations are handled automatically by the platform.
-</p>
+    <h3>7.1 How Referrals Work</h3>
+    <p>
+      Referrals may occur through a user's referral link, referral QR code, referral code, or other referral methods made available by MOVE THAT COUCH!. Referral tracking and bonus calculations are handled automatically by the platform.
+    </p>
 
-<h3>7.2 Bonus Structure</h3>
-<p>
-  Referrers earn <strong>10% of the booking deposit</strong> for each eligible completed service completed by a referred user.
-</p>
+    <h3>7.2 Bonus Structure</h3>
+    <p>
+      Referrers earn <strong>10% of the booking deposit</strong> for each eligible completed service completed by a referred user.
+    </p>
 
-<p>
-  Referral bonuses are calculated based on the <strong>booking deposit only</strong> and do not apply to the total service price.
-</p>
+    <p>
+      Referral bonuses are calculated based on the <strong>booking deposit only</strong> and do not apply to the total service price.
+    </p>
 
-<h3>7.3 Eligibility</h3>
-<p>
-  Referral bonuses are paid only for <strong>completed services</strong>. No referral bonus is paid for
-  canceled, refunded, disputed, fraudulent, or otherwise ineligible transactions.
-</p>
-<p>
-  Referrers must maintain an account in <strong>good standing</strong> at the time the referred service is
-  completed in order to receive a referral bonus.
-</p>
+    <h3>7.3 Eligibility</h3>
+    <p>
+      Referral bonuses are paid only for <strong>completed services</strong>. No referral bonus is paid for
+      canceled, refunded, disputed, fraudulent, or otherwise ineligible transactions.
+    </p>
 
-<p>
-  Referral bonuses and MTC Credits are not paid or awarded in cases of self-referral or where the referrer and referred user share the same payout destination or otherwise appear to be the same person. MOVE THAT COUCH! reserves the right to withhold, deny, revoke, adjust, or cancel referral bonuses or MTC Credits in cases of suspected abuse, manipulation, duplicate accounts, fraudulent activity, chargebacks, or violation of these Terms.
-</p>
+    <p>
+      Referrers must maintain an account in <strong>good standing</strong> at the time the referred service is
+      completed in order to receive a referral bonus.
+    </p>
 
-<h3>7.5 Payouts</h3>
-<p>
-  Referral bonuses are paid through the platform’s designated payout provider. Users are responsible
-  for maintaining accurate payout information and complying with any tax reporting obligations
-  associated with referral earnings.
-</p>
+    <p>
+      Referral bonuses and MTC Credits are not paid or awarded in cases of self-referral or where the referrer and referred user share the same payout destination or otherwise appear to be the same person. MOVE THAT COUCH! reserves the right to withhold, deny, revoke, adjust, or cancel referral bonuses or MTC Credits in cases of suspected abuse, manipulation, duplicate accounts, fraudulent activity, chargebacks, or violation of these Terms.
+    </p>
 
-<h3>7.6 Promotional Credits & Incentive Programs</h3>
+    <h3>7.5 Payouts</h3>
+    <p>
+      Referral bonuses are paid through the platform’s designated payout provider. Users are responsible
+      for maintaining accurate payout information and complying with any tax reporting obligations
+      associated with referral earnings.
+    </p>
 
-<p>
-  MOVE THAT COUCH! may offer promotional credits, rewards, incentives, referral programs, review programs, early-adopter programs, or other promotional campaigns from time to time.
-</p>
+    <h3>7.6 Promotional Credits & Incentive Programs</h3>
 
-<p>
-  Such programs may award MTC Credits or other promotional benefits to eligible users for actions such as:
-</p>
+    <p>
+      MOVE THAT COUCH! may offer promotional credits, rewards, incentives, referral programs, review programs, early-adopter programs, or other promotional campaigns from time to time.
+    </p>
 
-<ul>
-  <li>Signing up using a referral link, referral code, or referral QR code</li>
-  <li>Completing eligible services</li>
-  <li>Providing reviews or feedback</li>
-  <li>Booking new or recently joined service providers</li>
-  <li>Participating in promotional campaigns</li>
-  <li>Other qualifying activities designated by MOVE THAT COUCH!</li>
-</ul>
+    <p>
+      Such programs may award MTC Credits or other promotional benefits to eligible users for actions such as:
+    </p>
 
-<p>
-  MTC Credits:
-</p>
+    <ul>
+      <li>Signing up using a referral link, referral code, or referral QR code</li>
+      <li>Completing eligible services</li>
+      <li>Providing reviews or feedback</li>
+      <li>Booking new or recently joined service providers</li>
+      <li>Participating in promotional campaigns</li>
+      <li>Other qualifying activities designated by MOVE THAT COUCH!</li>
+    </ul>
 
-<ul>
-  <li>Have no cash value</li>
-  <li>Are non-transferable</li>
-  <li>May not be redeemed for cash</li>
-  <li>May only be used toward eligible booking deposits within the platform</li>
-  <li>May expire if not used within the stated promotional period</li>
-</ul>
+    <p>
+      MTC Credits:
+    </p>
 
-<p>
-  MTC Credits used toward a booking deposit may be forfeited if a booking is canceled within a period that would otherwise trigger a provider cancellation payout.
-</p>
+    <ul>
+      <li>Have no cash value</li>
+      <li>Are non-transferable</li>
+      <li>May not be redeemed for cash</li>
+      <li>May only be used toward eligible booking deposits within the platform</li>
+      <li>May expire if not used within the stated promotional period</li>
+    </ul>
 
-<h3>7.7 Quarterly Rewards Program</h3>
+    <p>
+      MTC Credits used toward a booking deposit may be forfeited if a booking is canceled within a period that would otherwise trigger a provider cancellation payout.
+    </p>
 
-<p>
-  MOVE THAT COUCH! may offer a Quarterly Rewards Program through which eligible users earn MTC Credits based on qualifying booking activity during a calendar quarter.
-</p>
+    <h3>7.7 Quarterly Rewards Program</h3>
 
-<p>
-  Eligibility requirements, reward percentages, qualifying transactions, expiration periods, and other program rules are determined solely by MOVE THAT COUCH! and may be modified, suspended, or discontinued at any time.
-</p>
+    <p>
+      MOVE THAT COUCH! may offer a Quarterly Rewards Program through which eligible users earn MTC Credits based on qualifying booking activity during a calendar quarter.
+    </p>
 
-<p>
-  Unless otherwise specified:
-</p>
+    <p>
+      Eligibility requirements, reward percentages, qualifying transactions, expiration periods, and other program rules are determined solely by MOVE THAT COUCH! and may be modified, suspended, or discontinued at any time.
+    </p>
 
-<ul>
-  <li>Rewards are calculated using qualifying booking deposits paid through the platform.</li>
-  <li>Rewards are issued as MTC Credits.</li>
-  <li>MTC Credits may only be used toward eligible booking deposits.</li>
-  <li>MTC Credits have no cash value, are non-transferable, and may expire if not used within the stated promotional period.</li>
-  <li>Refunded, canceled, fraudulent, disputed, chargebacked, or otherwise ineligible transactions may be excluded from reward calculations.</li>
-</ul>
+    <p>
+      Unless otherwise specified:
+    </p>
 
-<p>
-  Participation in the Quarterly Rewards Program does not create any vested right to future rewards, credits, or promotional benefits.
-</p>
+    <ul>
+      <li>Rewards are calculated using qualifying booking deposits paid through the platform.</li>
+      <li>Rewards are issued as MTC Credits.</li>
+      <li>MTC Credits may only be used toward eligible booking deposits.</li>
+      <li>MTC Credits have no cash value, are non-transferable, and may expire if not used within the stated promotional period.</li>
+      <li>Refunded, canceled, fraudulent, disputed, chargebacked, or otherwise ineligible transactions may be excluded from reward calculations.</li>
+    </ul>
 
-<h3>7.8 Program Changes and Termination</h3>
-<p>
-  The referral program and any promotional credit programs are offered at the sole discretion of MOVE THAT COUCH!. We reserve the right to modify, suspend, or terminate such programs, or adjust referral bonus amounts, MTC Credit amounts, expiration periods, eligibility requirements, or related program rules at any time for any reason, including but not limited to legal, regulatory, tax, or business considerations.
-</p>
-<p>
-  Any changes will apply prospectively. Referral bonuses already earned for completed eligible
-  services prior to the effective date of such changes will not be affected.
-</p>
+    <p>
+      Participation in the Quarterly Rewards Program does not create any vested right to future rewards, credits, or promotional benefits.
+    </p>
 
-<h3>7.9 No Guarantee</h3>
-<p>
-  MOVE THAT COUCH! does not guarantee referral tracking accuracy and is not responsible for missed or
-  skipped bonuses due to technical errors, misuse, third-party interference, incorrect referral usage,
-  or system limitations.
-</p>
+    <h3>7.8 Program Changes and Termination</h3>
+    <p>
+      The referral program and any promotional credit programs are offered at the sole discretion of MOVE THAT COUCH!. We reserve the right to modify, suspend, or terminate such programs, or adjust referral bonus amounts, MTC Credit amounts, expiration periods, eligibility requirements, or related program rules at any time for any reason, including but not limited to legal, regulatory, tax, or business considerations.
+    </p>
+
+    <p>
+      Any changes will apply prospectively. Referral bonuses already earned for completed eligible
+      services prior to the effective date of such changes will not be affected.
+    </p>
+
+    <h3>7.9 No Guarantee</h3>
+    <p>
+      MOVE THAT COUCH! does not guarantee referral tracking accuracy and is not responsible for missed or
+      skipped bonuses due to technical errors, misuse, third-party interference, incorrect referral usage,
+      or system limitations.
+    </p>
 
     <h2>8. User Responsibilities</h2>
 
@@ -673,19 +735,19 @@ We do not provide transportation or labor services and do not operate as a carri
     <h3>8.1 Customers</h3>
     <ul>
       <li>Provide accurate service location details</li>
-<li>Ensure items and requests are legal, safe, and reasonably manageable</li>
-<li>Ensure all required parts, hardware, instructions, and mounting conditions are available and suitable</li>
-<li>Pay the remaining balance to the service provider using a payment method agreed upon by the parties, which may include payment tools made available through the platform</li>
+      <li>Ensure items and requests are legal, safe, and reasonably manageable</li>
+      <li>Ensure all required parts, hardware, instructions, and mounting conditions are available and suitable</li>
+      <li>Pay the remaining balance to the service provider using a payment method agreed upon by the parties, which may include payment tools made available through the platform</li>
     </ul>
 
     <h3>8.2 Service Providers</h3>
-<ul>
-  <li>Maintain safe and appropriate vehicles, tools, and equipment</li>
-  <li>Comply with all applicable laws and insurance requirements</li>
-  <li>Only accept jobs they are qualified, legally permitted, and equipped to perform</li>
-  <li>Complete services as agreed unless prevented by legitimate reasons</li>
-  <li>Review and verify any AI-generated suggestions or auto-filled information before relying on or submitting it</li>
-</ul>
+    <ul>
+      <li>Maintain safe and appropriate vehicles, tools, and equipment</li>
+      <li>Comply with all applicable laws and insurance requirements</li>
+      <li>Only accept jobs they are qualified, legally permitted, and equipped to perform</li>
+      <li>Complete services as agreed unless prevented by legitimate reasons</li>
+      <li>Review and verify any AI-generated suggestions or auto-filled information before relying on or submitting it</li>
+    </ul>
 
     <h3>8.3 Third-Party Service Contacts</h3>
     <p>
@@ -708,12 +770,12 @@ We do not provide transportation or labor services and do not operate as a carri
     </ul>
 
     <p>
-  Customers receive a platform receipt for booking deposits paid through MOVE THAT COUCH!. If a service provider elects to send an invoice through the platform and payment is completed through Stripe, customers may also receive transaction records, receipts, or payment confirmations related to that payment.
-</p>
+      Customers receive a platform receipt for booking deposits paid through MOVE THAT COUCH!. If a service provider elects to send an invoice through the platform and payment is completed through Stripe, customers may also receive transaction records, receipts, or payment confirmations related to that payment.
+    </p>
 
-<p>
-  Service providers may optionally generate service provider receipts and W-9 forms through the platform.
-</p>
+    <p>
+      Service providers may optionally generate service provider receipts and W-9 forms through the platform.
+    </p>
 
     <p>
       MOVE THAT COUCH! does not verify off-platform payments, does not guarantee
@@ -736,10 +798,10 @@ We do not provide transportation or labor services and do not operate as a carri
     </p>
 
     <p>
-  Users may manage and update their notification preferences, including enabling
-  or disabling SMS, email, and push notifications, at any time through their
-  account settings in the MOVE THAT COUCH! app or website.
-</p>
+      Users may manage and update their notification preferences, including enabling
+      or disabling SMS, email, and push notifications, at any time through their
+      account settings in the MOVE THAT COUCH! app or website.
+    </p>
 
     <p>
       MOVE THAT COUCH! does <strong>not</strong> send marketing, advertising, or
@@ -761,97 +823,97 @@ We do not provide transportation or labor services and do not operate as a carri
     </ul>
 
     <p>
-  MOVE THAT COUCH! reserves the right to suspend or terminate user accounts,
-  restrict access to features, or remove users from the platform at any time
-  for violations of these Terms, misuse of the platform, suspected fraud,
-  abuse, or conduct that may create risk or liability.
-</p>
+      MOVE THAT COUCH! reserves the right to suspend or terminate user accounts,
+      restrict access to features, or remove users from the platform at any time
+      for violations of these Terms, misuse of the platform, suspected fraud,
+      abuse, or conduct that may create risk or liability.
+    </p>
 
     <h2>13. AI-Powered Features & Automated Tools</h2>
 
-<p>
-  MOVE THAT COUCH! may provide certain AI-powered or automated tools and features
-  using internal systems and third-party providers, including tools designed to:
-</p>
+    <p>
+      MOVE THAT COUCH! may provide certain AI-powered or automated tools and features
+      using internal systems and third-party providers, including tools designed to:
+    </p>
 
-<ul>
-  <li>Identify or suggest items from uploaded photos</li>
-  <li>Assist users in creating or completing service requests</li>
-  <li>Provide estimated pricing ranges, quote likelihood insights, timing expectations, or request-related guidance</li>
-  <li>Provide profile improvement suggestions</li>
-  <li>Provide quoting guidance, pricing suggestions, equipment recommendations, or customer communication suggestions</li>
-  <li>Analyze content for safety, fraud prevention, moderation, policy enforcement, quality control, or platform operations</li>
-</ul>
+    <ul>
+      <li>Identify or suggest items from uploaded photos</li>
+      <li>Assist users in creating or completing service requests</li>
+      <li>Provide estimated pricing ranges, quote likelihood insights, timing expectations, or request-related guidance</li>
+      <li>Provide profile improvement suggestions</li>
+      <li>Provide quoting guidance, pricing suggestions, equipment recommendations, or customer communication suggestions</li>
+      <li>Analyze content for safety, fraud prevention, moderation, policy enforcement, quality control, or platform operations</li>
+    </ul>
 
-<p>
-  AI-generated outputs, suggestions, analyses, estimates, predictions, and
-  recommendations are provided for informational and convenience purposes only
-  and may be incomplete, inaccurate, inappropriate, delayed, or incorrect.
-</p>
+    <p>
+      AI-generated outputs, suggestions, analyses, estimates, predictions, and
+      recommendations are provided for informational and convenience purposes only
+      and may be incomplete, inaccurate, inappropriate, delayed, or incorrect.
+    </p>
 
-<p>
-  Users are solely responsible for reviewing and verifying all information before
-  relying on it or submitting it through the platform.
-</p>
+    <p>
+      Users are solely responsible for reviewing and verifying all information before
+      relying on it or submitting it through the platform.
+    </p>
 
-<h3>13.1 No Professional Advice or Guarantees</h3>
+    <h3>13.1 No Professional Advice or Guarantees</h3>
 
-<p>
-  MOVE THAT COUCH! does not guarantee the accuracy, reliability, safety,
-  completeness, legality, suitability, usefulness, availability, or outcomes
-  of any AI-generated output or feature.
-</p>
+    <p>
+      MOVE THAT COUCH! does not guarantee the accuracy, reliability, safety,
+      completeness, legality, suitability, usefulness, availability, or outcomes
+      of any AI-generated output or feature.
+    </p>
 
-<p>
-  AI-generated quote guidance, pricing suggestions, timing expectations,
-  estimated price ranges, equipment recommendations, scheduling suggestions,
-  profile recommendations, request insights, or customer communication prompts
-  do not constitute professional, financial, legal, safety, logistics,
-  transportation, or business advice.
-</p>
+    <p>
+      AI-generated quote guidance, pricing suggestions, timing expectations,
+      estimated price ranges, equipment recommendations, scheduling suggestions,
+      profile recommendations, request insights, or customer communication prompts
+      do not constitute professional, financial, legal, safety, logistics,
+      transportation, or business advice.
+    </p>
 
-<p>
-  Service providers remain solely responsible for determining:
-</p>
+    <p>
+      Service providers remain solely responsible for determining:
+    </p>
 
-<ul>
-  <li>Whether to accept a request</li>
-  <li>Appropriate pricing and quote amounts</li>
-  <li>Required labor, vehicles, tools, and equipment</li>
-  <li>Safety precautions and handling methods</li>
-  <li>Whether they are qualified and legally permitted to perform a service</li>
-</ul>
+    <ul>
+      <li>Whether to accept a request</li>
+      <li>Appropriate pricing and quote amounts</li>
+      <li>Required labor, vehicles, tools, and equipment</li>
+      <li>Safety precautions and handling methods</li>
+      <li>Whether they are qualified and legally permitted to perform a service</li>
+    </ul>
 
-<p>
-  Customers remain solely responsible for reviewing and confirming the accuracy
-  of service requests, item descriptions, measurements, access conditions,
-  photos, scheduling details, and related information.
-</p>
+    <p>
+      Customers remain solely responsible for reviewing and confirming the accuracy
+      of service requests, item descriptions, measurements, access conditions,
+      photos, scheduling details, and related information.
+    </p>
 
-<h3>13.2 Automated Analysis & Content Review</h3>
+    <h3>13.2 Automated Analysis & Content Review</h3>
 
-<p>
-  By using the platform, users acknowledge and agree that uploaded photos,
-  videos, profile information, descriptions, messages, delivery request details,
-  and other submitted content may be processed by automated systems for
-  functionality, moderation, fraud prevention, policy enforcement, safety review,
-  feature improvement, quality control, and platform operations. Content submitted
-  through AI-powered features may also be processed by AI tools as described in
-  these Terms and our Privacy Policy.
-</p>
+    <p>
+      By using the platform, users acknowledge and agree that uploaded photos,
+      videos, profile information, descriptions, messages, delivery request details,
+      and other submitted content may be processed by automated systems for
+      functionality, moderation, fraud prevention, policy enforcement, safety review,
+      feature improvement, quality control, and platform operations. Content submitted
+      through AI-powered features may also be processed by AI tools as described in
+      these Terms and our Privacy Policy.
+    </p>
 
-<p>
-  MOVE THAT COUCH! reserves the right to review, flag, restrict, remove, or
-  investigate content or accounts based on automated or human review processes.
-</p>
+    <p>
+      MOVE THAT COUCH! reserves the right to review, flag, restrict, remove, or
+      investigate content or accounts based on automated or human review processes.
+    </p>
 
-<h3>13.3 Third-Party AI Providers</h3>
+    <h3>13.3 Third-Party AI Providers</h3>
 
-<p>
-  Certain AI-powered features may rely on third-party service providers.
-  User content submitted through AI-powered features may be processed by such
-  providers solely for purposes related to platform functionality and operations.
-</p>
+    <p>
+      Certain AI-powered features may rely on third-party service providers.
+      User content submitted through AI-powered features may be processed by such
+      providers solely for purposes related to platform functionality and operations.
+    </p>
 
     <h2>14. Changes to These Terms</h2>
     <p>
@@ -868,25 +930,27 @@ We do not provide transportation or labor services and do not operate as a carri
   </section>
 </main>
 
-  <div class="returnToAppWrap">
+<div class="returnToAppWrap">
   <a class="returnToAppBtn" href="https://app.movethatcouch.com/open-app">
     Return to App
   </a>
 </div>
 
-<footer>
-  <div class="footer-links">
-    <a href="https://www.movethatcouch.com">Home</a> |
-    <a href="https://legal.movethatcouch.com/privacy.html">Privacy Policy</a>
-  </div>
+<footer class="legal-footer">
+  <nav class="footer-nav" aria-label="Footer">
+    <a href="https://movethatcouch.com/">Home</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://movethatcouch.com/about">About</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://pages.movethatcouch.com/">Service Areas</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://legal.movethatcouch.com/privacy.html">Privacy</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://legal.movethatcouch.com/tos.html">Terms</a>
+  </nav>
 
-  <div class="footer-copy">
-  © 2026 ZM Platforms LLC. All rights reserved.
-</div>
+  <span>© 2026 ZM Platforms LLC. All rights reserved.</span>
+</footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-  </body>
+</body>
 </html>
